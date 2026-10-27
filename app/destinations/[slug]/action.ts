@@ -89,7 +89,7 @@ export async function bookDestination(
         first_name: user.name?.trim().substr(0, 50) || "User",
         last_name: ".",
         tx_ref: txRef,
-        callback_url: `${process.env.NGROK_URL}/api/webhook/chapa`,
+        callback_url: `${process.env.BETTER_AUTH_URL}/api/webhook/chapa`,
         return_url: `${process.env.BETTER_AUTH_URL}/payment/success`,
         customization: {
           title: "Tour Payment",
