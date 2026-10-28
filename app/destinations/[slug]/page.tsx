@@ -15,7 +15,6 @@ import { Button } from "@/components/ui/button";
 import { BookingButton } from "./_components/BookingButton";
 import { Skeleton } from "@/components/ui/skeleton";
 
-
 type Params = Promise<{ slug: string }>;
 
 async function DestinationDetailContent({ params }: { params: Params }) {
@@ -131,9 +130,6 @@ async function DestinationDetailContent({ params }: { params: Params }) {
           ) : (
             <BookingButton locationId={destination.id} />
           )}
-          <p className="mt-2 text-center text-[11px] text-muted-foreground">
-            Booking isn&apos;t connected yet — this button is a placeholder.
-          </p>
         </aside>
       </div>
     </div>
@@ -200,15 +196,10 @@ function DestinationDetailSkeleton() {
   );
 }
 
-export default function DestinationDetailPage({
-  params,
-}: {
-  params: Params;
-}) {
+export default function DestinationDetailPage({ params }: { params: Params }) {
   return (
     <Suspense fallback={<DestinationDetailSkeleton />}>
       <DestinationDetailContent params={params} />
     </Suspense>
   );
 }
-
