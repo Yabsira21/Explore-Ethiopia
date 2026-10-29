@@ -111,13 +111,6 @@ async function DestinationDetailContent({ params }: { params: Params }) {
             </div>
           </div>
 
-          {/* TODO: wire this up once booking is built */}
-          {/* <button
-            type="button"
-            className="mt-6 w-full rounded-full bg-brand py-3 text-sm font-semibold text-brand-foreground transition hover:opacity-90"
-          >
-            Book this trip
-          </button> */}
           {isBooked ? (
             <Button
               // className={buttonVariants({ className: "w-full" })}

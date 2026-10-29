@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+
   title: "Explore Ethiopia | Discover and Plan Your Journey",
   description: "Discover Ethiopian destinations and plan your own trips with Explore Ethiopia.",
-};
+}
 
 interface LayoutProps {
   children: React.ReactNode;
