@@ -26,8 +26,18 @@ function DestinationsGridSkeleton() {
 
 export default function DestinationsPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl">
-      <h1 className="mb-8 text-2xl font-bold">Destinations</h1>
+  <div className="mx-auto w-full max-w-7xl space-y-8 px-4 pb-10 lg:px-6">
+    <div className="border-b border-border/70 pb-6">
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C69A45]">
+        Explore Ethiopia
+      </p>
+      <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+        Destinations
+      </h1>
+      <p className="mt-3 max-w-xl text-sm leading-7 text-muted-foreground">
+        Manage the places travelers can discover across Ethiopia.
+      </p>
+    </div>
       <Suspense fallback={<DestinationsGridSkeleton />}>
         <DestinationsContent />
       </Suspense>

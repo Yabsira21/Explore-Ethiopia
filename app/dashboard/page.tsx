@@ -25,14 +25,14 @@ async function DashboardContent() {
   );
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-10">
       {/* Top Header Section with Greeting and Action buttons */}
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-border/60 pb-6">
+      <div className="flex flex-col gap-4 border-b border-border/70 pb-8 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground mt-1">
+          <h1 className="mt-1 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             Welcome back, {user.name ? user.name.split(" ")[0] : "Traveler"}!
           </h1>
-          <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
             Track your verified tour reservations, departure schedules, and
             unexplored destinations.
           </p>

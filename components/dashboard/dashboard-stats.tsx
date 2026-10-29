@@ -25,9 +25,9 @@ interface DashboardStatsProps {
 
 export function DashboardStats({ stats }: DashboardStatsProps) {
   return (
-    <div className="grid grid-cols-1 gap-4 *:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card *:data-[slot=card]:shadow-xs @xl/main:grid-cols-2 @5xl/main:grid-cols-4 dark:*:data-[slot=card]:bg-card">
+    <div className="grid grid-cols-1 gap-5 *:data-[slot=card]:rounded-2xl *:data-[slot=card]:border-border/70 *:data-[slot=card]:bg-card *:data-[slot=card]:shadow-sm @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
       {/* Total Bookings */}
-      <Card className="@container/card">
+      <Card className="@container/card transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <div>
             <CardDescription>Total Bookings</CardDescription>

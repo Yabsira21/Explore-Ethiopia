@@ -47,12 +47,12 @@ export function DestinationCard({ destination }: { destination: Destination }) {
   };
 
   return (
-    <article className="group relative min-h-[360px] overflow-hidden rounded-2xl bg-muted">
+    <article className="group relative min-h-[360px] overflow-hidden rounded-3xl border border-border/40 bg-[#F0EBE1] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <img
         src={url}
         alt={destination.title}
         loading="lazy"
-        className="absolute inset-0 size-full object-cover transition duration-700 group-hover:scale-105"
+        className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
 
       {/* Two-sided gradient: darkens both the top (badge/delete button) and bottom (text)
@@ -60,7 +60,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/10" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
-      <span className="absolute left-4 top-4 rounded-full bg-black/55 px-3 py-1.5 text-[10px] font-medium tracking-wide text-white ring-1 ring-inset ring-white/15 backdrop-blur-md">
+      <span className="absolute left-4 top-4 rounded-full border border-white/25 bg-[#244B3C]/85 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-md">
         {destination.category}
       </span>
 
@@ -112,7 +112,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         <a
           href={`/admin/destinations/${destination.id}/edit`}
           aria-label={`Explore ${destination.title}`}
-          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white text-black transition group-hover:bg-brand"
+          className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#FAF7F0] text-[#244B3C] shadow-md transition-all duration-300 hover:bg-[#E3C58A] group-hover:-translate-y-1"
         >
           <ArrowUpRight size={19} />
         </a>
@@ -123,7 +123,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
 
 export function DestinationCardSkeleton() {
   return (
-    <div className="relative min-h-[360px] overflow-hidden rounded-2xl bg-muted/60 p-5 flex flex-col justify-between border border-border/40">
+    <div className="relative flex min-h-[360px] flex-col justify-between overflow-hidden rounded-3xl border border-border/70 bg-card p-5 shadow-sm">
       <div className="flex items-center justify-between">
         <div className="h-6 w-20 rounded-full bg-muted animate-pulse" />
         <div className="size-8 rounded-full bg-muted animate-pulse" />

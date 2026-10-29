@@ -21,7 +21,7 @@ export async function SectionCards() {
   const { totalCustomers, totalDestinations, totalRevenue, totalSignups } =
     await adminGetDashboardStats();
   return (
-    <div className="grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4 dark:*:data-[slot=card]:bg-card">
+    <div className="grid grid-cols-1 gap-5 px-4 *:data-[slot=card]:rounded-2xl *:data-[slot=card]:border-border/70 *:data-[slot=card]:bg-card *:data-[slot=card]:shadow-sm lg:grid-cols-2 xl:grid-cols-4 lg:px-6">
       <Card className="@container/card">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <div className="">

@@ -10,8 +10,10 @@ async function AdminDashboardContent() {
   return (
     <>
       <SectionCards />
-      <div className="px-4 lg:px-6">
-        <ChartAreaInteractive data={bookingData} />
+      <div className="px-4 pb-8 lg:px-6">
+        <div className="overflow-hidden rounded-2xl border border-border/70 bg-card p-2 shadow-sm sm:p-4">
+          <ChartAreaInteractive data={bookingData} />
+        </div>
       </div>
     </>
   );

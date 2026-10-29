@@ -64,12 +64,12 @@ export function DashboardSidebar({
               className="data-[slot=sidebar-menu-button]:p-1.5!"
               render={<Link href="/dashboard" />}
             >
-              <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+              <div className="flex size-9 items-center justify-center rounded-xl bg-[#244B3C] text-[#E3C58A] shadow-sm">
                 <Compass className="size-5" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
                 <span className="font-semibold tracking-tight text-foreground">
-                  Explore Ethiopia
+                  Explore <span className="text-[#C69A45]">Ethiopia</span>
                 </span>
                 <span className="text-[11px] text-muted-foreground">
                   Traveler Portal
@@ -101,8 +101,8 @@ export function DashboardSidebar({
                       tooltip={item.title}
                       className={
                         isActive
-                          ? "bg-accent text-accent-foreground font-medium"
-                          : "text-muted-foreground hover:text-foreground"
+                          ? "bg-[#244B3C] font-medium text-white hover:bg-[#315B49] hover:text-white"
+                          : "text-muted-foreground transition-colors hover:bg-accent hover:text-[#244B3C]"
                       }
                       render={<Link href={item.url} />}
                     >
