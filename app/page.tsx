@@ -20,6 +20,7 @@ async function HomeContent() {
             }
           : null
       }
+      role={session?.user.role ?? null}
       destinations={destinations}
     />
   );
@@ -79,4 +80,3 @@ export default function HomePage() {
     </Suspense>
   );
 }
-

@@ -28,6 +28,7 @@ type HomeClientProps = {
     email: string;
     image?: string | null;
   } | null;
+  role?: string | null;
   destinations: UserDestinationsData;
 };
 
@@ -55,7 +56,11 @@ type HomeClientProps = {
 //   },
 // ];
 
-export default function HomeClient({ user, destinations }: HomeClientProps) {
+export default function HomeClient({
+  user,
+  destinations,
+  role,
+}: HomeClientProps) {
   const signOut = useSignOut();
   // const destinations = await userGetDestinations();
 
@@ -93,15 +98,31 @@ export default function HomeClient({ user, destinations }: HomeClientProps) {
             Discover the beauty waiting around every corner.
           </p>
 
-          <Link
-            href="/destinations"
-            className="mt-8 inline-flex items-center gap-4 rounded-full bg-[#244B3C] py-2 pl-6 pr-2 text-sm font-semibold text-white shadow-lg transition duration-300 hover:bg-[#315F4C] hover:shadow-xl"
-          >
-            Start Exploring
-            <span className="flex size-10 items-center justify-center rounded-full bg-white">
-              <ArrowUpRight size={20} />
-            </span>
-          </Link>
+          {role == "admin" ? (
+            <>
+              <Link
+                href="/admin"
+                className="mt-8 inline-flex items-center gap-4 rounded-full bg-[#244B3C] py-2 pl-6 pr-2 text-sm font-semibold text-white shadow-lg transition duration-300 hover:bg-[#315F4C] hover:shadow-xl"
+              >
+                Go to Admin Page
+                <span className="flex size-10 items-center justify-center rounded-full bg-white">
+                  <ArrowUpRight size={20} className="text-[#244B3C]" />
+                </span>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/destinations"
+                className="mt-8 inline-flex items-center gap-4 rounded-full bg-[#244B3C] py-2 pl-6 pr-2 text-sm font-semibold text-white shadow-lg transition duration-300 hover:bg-[#315F4C] hover:shadow-xl"
+              >
+                Start Exploring
+                <span className="flex size-10 items-center justify-center rounded-full bg-white">
+                  <ArrowUpRight size={20} className="text-[#244B3C]" />
+                </span>
+              </Link>
+            </>
+          )}
 
           {/* Bottom left */}
           <div className="absolute bottom-8 left-6 text-left sm:bottom-10 sm:left-10 lg:left-12">
