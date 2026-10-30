@@ -192,7 +192,7 @@ export default function HomeClient({
 
           <div className="group relative min-h-[360px] overflow-hidden rounded-3xl bg-muted shadow-sm sm:min-h-[420px]">
             <img
-              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=85"
+              src="/tree.jpg"
               alt="African landscape"
               loading="lazy"
               className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
