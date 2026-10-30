@@ -241,7 +241,9 @@ export default function HomeClient({ user, destinations }: HomeClientProps) {
               </p>
               <h2 className="max-w-xl text-3xl font-semibold leading-[1.1] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
                 Destinations that{" "}
-                <span className="font-normal italic text-brand">stay with you.</span>
+                <span className="font-normal italic text-brand">
+                  stay with you.
+                </span>
               </h2>
             </div>
             <a
@@ -314,7 +316,10 @@ export default function HomeClient({ user, destinations }: HomeClientProps) {
                   </span>
                   {item}
                 </span>
-                <ArrowUpRight size={17} className="shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <ArrowUpRight
+                  size={17}
+                  className="shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
               </a>
             ))}
 
@@ -357,10 +362,15 @@ export default function HomeClient({ user, destinations }: HomeClientProps) {
                 <p className="text-xs text-muted-foreground">
                   Log in to start planning your trips.
                 </p>
-                <Button size="sm" className="shrink-0 rounded-full bg-[#244B3C] px-5 text-white shadow-sm transition-all duration-300 hover:bg-[#315F4C] hover:shadow-md">
+                <Button
+                  size="sm"
+                  className="shrink-0 rounded-full bg-[#244B3C] px-5 text-white shadow-sm transition-all duration-300 hover:bg-[#315F4C] hover:shadow-md"
+                >
                   <Link href="/login">
-                    <LogIn size={14} />
-                    Log in
+                    <span className="flex justify-center items-center">
+                      <LogIn size={14} className="mr-2" />
+                      Log in
+                    </span>
                   </Link>
                 </Button>
               </div>
@@ -378,8 +388,15 @@ export default function HomeClient({ user, destinations }: HomeClientProps) {
             Explore <span className="text-brand-text">Ethiopia.</span>
           </a>
           <p>Discover the extraordinary, one journey at a time.</p>
-          <a href="#home" className="group flex items-center gap-2 font-medium text-[#244B3C] transition-colors hover:text-[#9B7430]">
-            Back to top <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:-translate-y-1"/>
+          <a
+            href="#home"
+            className="group flex items-center gap-2 font-medium text-[#244B3C] transition-colors hover:text-[#9B7430]"
+          >
+            Back to top{" "}
+            <ArrowUpRight
+              size={14}
+              className="transition-transform duration-300 group-hover:-translate-y-1"
+            />
           </a>
         </div>
       </footer>

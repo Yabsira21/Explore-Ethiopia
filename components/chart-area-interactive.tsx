@@ -22,7 +22,7 @@ export const description = "An interactive area chart";
 const chartConfig = {
   bookings: {
     label: "Bookings",
-    color: "var(--chart-1)",
+    color: "var(--brand)",
   },
 } satisfies ChartConfig;
 
